@@ -2,23 +2,50 @@
 // ดูทีละตัว ถ้าไม่ใช่ช่องว่างให้ เช็คว่าคืออะไรถ้าเป็นตัวอักษรให้นับต่อและ+1 ถ้าเป็นช่องว่างให้ไม่บวก
 // จบแล้วแสดงว่านับได้กี่ตัว
 
-const word ="Kunyawee Muangae";
-let count = 0;
+//นับตัวอักษรไม่รวมช่องว่าง
 
-for (let i=0;i<word.length; i++){
+const word ="Kunyawee Muangae"
+let count= 0;
+
+for (let i=0;i<word.length;i++){
     if(word[i]!==" "){
-        count = count+1 ;
-    }
-} 
-console.log(count);
-
-const vowels = "aeiou";
-const word = "hello world";
-let count =0;
-
-for(let i = 0; i<word.length; i++){
-    if (vowels.includes(word[i])){
-        count = count+1 ;
+        count=count+1;
     }
 }
-console.log(count)
+
+console.log(count);
+
+//นับว่าในคำนั้นมีสระกี่ตัว
+
+const vowels= "aeiou" //สร้างตัวแปรสรพ เก็บรายชื่อสระ
+const a ="hello world" // สร้างตัวแปร a เก็บประโยคที่จะนับสระ
+let b=0; // สร้างตัวนับ b เริ่มที่ 0 ใช้ let เพราะค่าเปลี่ยนได้
+
+for(let i=0;i<a.length;i++){ // ให้ i เริ่มที่ตำแหน่ง 0 วนจนถึงตัวสุดท้ายของ a 
+    if(vowels.includes(a[i])){ //ถามว่าตัวอักษรที่ ตำแหน่ง i ของ a อยู่ในรายชื่อสระไหม
+        b = b+1; //ถ้าเป็นสระ ให้ ตัวนับ +1
+    }
+}
+console.log(b);
+
+const c="I Love Javascript" // เก็บประโยค
+const list =c.split(" "); // หั่นประโยคเป็นคำๆ
+let longest=""// สร้างตัวแปรเก็บคำที่ยาวที่สุด ให้เริ่มจากข้อความว่างๆ
+
+for(let i =0;i<list.length;i++){ //ไล่ดูทุกคำ
+    if(list[i].length>longest.length){ //ถ้าคำนี้ยาวกว่าในค่าที่เก็บไว้ 
+        longest = list[i];  //ให้เก็บคำที่ยาวกว่าแทนค่านั้น
+    }
+}
+    console.log(longest); //ดูครบแล้วพิมพ์คำที่ยาวที่สุด
+
+
+const d ="kaithod is my cat" // เกบประโยค
+const l = d.split(" ") // หั่นประโยคเป็นคำ
+let z=0; //ตัวนับเริ่มนับที่ 0
+for(let i =0;i<l.length;i++){ //ไล่ดูทุกชิ้นที่หั่นได้
+    if(l[i].length >0){ //ถ้าเป็นคำให้ตัวนับ +1
+         z = z+1;
+    }      
+}
+console.log(z);
