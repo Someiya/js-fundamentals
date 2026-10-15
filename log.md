@@ -28,3 +28,9 @@ alt +shift +f จัดบรรทัด
 วันนี้ง่วงมาก ทำผิดเยอะอะ
 text[i] ===" " นับช่องว่าง
 .split(" ") แบ่งข้อความยาวๆเป็นคำ
+
+วันที่ 4 (15  ต.ค 69)  1 ชม. 27 นาที
+word.length(จำนสนคำทั้งหมด) กับ word[i].length ต่างกัน (ความยาวของคำที่ตำแหน่ง i )ผิดตรงนี้บ่อย 
+ทวน countDigits/longestLength/countSpaces, เริ่ม array (push, sumAll, average, สุ่มเมนู)
+
+ติดเรื่อง .includes และ words[i].length

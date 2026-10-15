@@ -74,11 +74,11 @@ function addTen(n) {
   return n + 10;
 }
 console.log(addTen(5));
-console.log(addTen("0"));
+console.log(addTen(0));
 
 //2. ทักทาย
 function greet(name) {
-  return "Hello" + name;
+  return "Hello " + name;
 }
 console.log(greet("Praewa"));
 
